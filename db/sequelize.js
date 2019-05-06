@@ -4,7 +4,7 @@ const TempModel = require('../models/temp');
 const MessagesModel = require('../models/messages');
 //                              database, username, password
 const sequelize = new Sequelize('postgres', 'root', 'root', {
-  host: 'ec2-3-83-109-153.compute-1.amazonaws.com',
+  host: 'ec2-18-233-98-180.compute-1.amazonaws.com',
   dialect: 'postgres',
   port: 5432
 })
