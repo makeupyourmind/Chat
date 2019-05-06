@@ -119,7 +119,7 @@ exports.resetPassword = function(req,res) {
                   from: 'support@gmail.com',			//sender's email
                   subject: 'Verification url to resetPassword',//Subject
                   text: "Your verification url : ",
-                  html: 'http://' + "ec2-3-83-109-153.compute-1.amazonaws.com:80/" + '/resetPasswordConfrim/' + token		//content		//HTML content
+                  html: 'http://' + "ec2-18-233-98-180.compute-1.amazonaws.com/" + '/resetPasswordConfrim/' + token		//content		//HTML content
                 };
                 sgMail.send(msg);
                 res.send("url sent successfully");
