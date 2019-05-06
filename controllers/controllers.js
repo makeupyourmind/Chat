@@ -111,7 +111,7 @@ exports.resetPassword = function(req,res) {
               console.log("token : ", token);
 
               const sgMail = require('@sendgrid/mail');
-                sgMail.setApiKey();
+                sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
                      //res.render(__dirname + '/views/done', {data : req.body.text } );
                 const msg = {
@@ -244,7 +244,7 @@ console.log("passwordToSave : ", passwordToSave);
       res.status(400).send('Bad Request');
     }else {
       const sgMail = require('@sendgrid/mail');
-             sgMail.setApiKey();
+             sgMail.setApiKey(process.env.SENDGRID_API_KEY);
              let code = rand=Math.floor((Math.random() * 100) + 54);
              //res.render(__dirname + '/views/done', {data : req.body.text } );
              const msg = {
