@@ -60,6 +60,9 @@ io.sockets.on('connection', function(socket) {
 			.then((data) => {
 				 let limit = 10;
 				 let offset = data.count - limit;
+				 if(offset < 0){
+					 offset = 0;
+				 }
 				 //console.log("offset : ", offset);
 				 Messages.findAll({
 					 limit: limit,
