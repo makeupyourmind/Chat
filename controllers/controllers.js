@@ -174,7 +174,7 @@ exports.login = function(req,res){
 
   User
   .findOne({
-  where: {email: req.body.email, name: req.body.name, password: req.body.password},
+  where: {email: req.body.email},
   attributes: ['name','password']
   })
   .then(task => {
