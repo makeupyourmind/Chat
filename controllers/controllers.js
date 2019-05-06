@@ -270,7 +270,7 @@ console.log("passwordToSave : ", passwordToSave);
     }
 })
 .catch((e) => {
-  res.send(e);
+  res.status(400).json({error: e});
 })
 }
 
